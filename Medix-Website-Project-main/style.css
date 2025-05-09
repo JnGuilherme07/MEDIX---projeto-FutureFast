@@ -1,0 +1,749 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+
+h1 {
+    text-decoration: none;
+    font-size: 2em;
+    color: #ffffff;
+  }
+ 
+  h1::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    transition: .5s ease-out;
+  }
+ 
+  h1:hover::after {
+    width: 100%;
+  }
+
+
+
+
+h3 {
+    text-decoration: none;
+  }
+ 
+  h3::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: rgba(52, 148, 173, 1);
+    transition: .5s ease-out;
+  }
+ 
+  h3:hover::after {
+    width: 90%;
+  }
+ 
+.centroPrincipal {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ 
+/* Header */
+ 
+.header {
+    display: flex;
+    justify-content: space-between; /* Distribui logo e navegação */
+    align-items: center; /* Alinha itens verticalmente no centro */
+    padding: 13px;
+}
+ 
+.logo {
+    display: flex;
+    align-items: center; /* Alinha logo e texto lado a lado */
+}
+ 
+.imgLogo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Faz a logo ficar em um círculo */
+    object-fit: cover; /* Garante que a imagem se ajuste ao círculo */
+    margin-right: 15px; /* Espaço entre a logo e o texto */
+}
+ 
+.main-header {
+    background-color: #ffffff;
+    color: #333;
+    width: 100%;
+}
+ 
+.logoTxt {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #333;
+}
+
+
+ 
+.main-nav ul {
+    font-size: 19px;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+ 
+.main-nav ul li {
+    margin: 0 15px;
+}
+ 
+.main-nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+ 
+.main-nav ul li a:hover {
+    color: #808080;
+}
+ 
+/* Hero Section */
+.hero {
+    background: url('imgs/Design sem nome.png') no-repeat center center/cover; /* Atualizado */
+    color: #fff;
+    text-align: center;
+    padding: 240px 0;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+    height: 115vh;
+    animation: parallaxScroll 5s infinite linear;
+}
+ 
+.hero h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    animation: slideIn 1.5s ease-out;
+}
+ 
+.hero p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    animation: slideIn 2s ease-out;
+    margin-top: -21px;
+}
+ 
+.cta-btn {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 1.3em;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(139, 139, 139, 0.4);
+    transition: background-color 0.3s, transform 0.3s;
+    animation: pulse 2s infinite;
+}
+ 
+.cta-btn:hover {
+    background-color: #919191;
+    transform: scale(1.1);
+}
+ 
+/* Services Section */
+.about {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    opacity: 3;
+    transform: translateX(0px);
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+
+ .about.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.about h5 {
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+
+
+.about-container {
+    display: flex;
+    overflow-x: auto; /* Habilita o scroll horizontal */
+    padding: 18px;
+    scrollbar-width: none; /* Para navegadores compatíveis */
+}
+
+
+.about-card {
+    flex: 0 0 auto; /* Impede que os cards encolham */
+    width: 231px; /* Largura fixa dos cards */
+    margin: 0 15px; /* Espaçamento entre os cards */
+    background-color: rgba(122, 161, 187, 1);
+    border-radius: 15px;
+    padding: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+
+.about-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.about-card h4 {
+    margin: 15px 0 10px;
+    font-size: 1.3em;
+    color: #333;
+}
+
+
+.about-card p {
+    color: #ffffff;
+}
+
+
+/* Efeito de hover */
+.about-card:hover {
+    transform: scale(1.05);
+}
+
+
+
+ 
+----------------------------
+/*Missão1*/
+.titMis{
+    width: 100%;
+    height: 100%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    position: fixed;
+    z-index: -1;
+
+
+    font-size: 40px;
+    color: #000000;
+}
+
+
+.txtMis{
+    align-content: start;
+    padding: 50px 100px;
+    margin-top: -80px;
+    height:100% ;
+    background: linear-gradient(180deg, rgba(109,143,170,1) 0%, rgba(109,143,170,1) 60%, rgba(255,255,255,1) 100%);
+}
+
+.txtMis h3{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+
+.txtMis p{
+    font-size: 1.6em;
+    color: white;
+    display: flex;
+    width: 1005px;
+}
+
+
+.ondas-box{
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+
+.onda {
+    margin-top: 100px;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 498px;
+    background-image: url('imgs/waves3.png'); /* Atualizado */
+    background-size: 1000px 100px;
+    animation: ondaAnimada 5s ease-in-out infinite alternate;
+}
+
+
+@keyframes ondaAnimada {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+
+#onda1{
+    z-index: 503;
+    opacity: 1;
+    background-position-x: 400;
+}
+#onda2{
+    z-index: 502;
+    opacity: 0.5;
+    background-position-x: 300px;
+}
+#onda3{
+    z-index: 501;
+    opacity: 0.2;
+    background-position-x: 200px;
+}
+#onda4{
+    z-index: 500;
+    opacity: 0.8;
+    background-position-x: 100px;
+}
+
+
+
+
+
+
+/* MISSÂO2 */
+.mission2 {
+    background-color: #ffffff;
+    padding: 50px 20px;
+}
+ 
+
+ 
+ 
+.imgMis {
+    width: 444px;
+    height: 400px;
+    border-radius: 15%;
+    object-fit: cover;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+ 
+.txtMis3 {
+    font-size: 1.5em;
+    margin-top: 60px;
+    flex: 1;
+}
+ 
+.tilMis {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+ 
+.pTxt {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+ 
+/*AI*/
+.misON2 {
+    display: flex;
+    align-items: flex-start;
+    width: 93vw;
+    opacity: 0; /* Inicia invisível */
+    transform: translateX(-100px); /* Inicia fora da tela à esquerda */
+    transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out; /* Transição mais rápida e suave */
+    margin-top: -60px;
+}
+
+
+.misON2.animate {
+    opacity: 1; /* Torna visível */
+    transform: translateX(0); /* Move para a posição final */
+}
+
+.ourAI {
+    background-color: #ffffff;
+    padding: 50px 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+
+.ourAI.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.ai {
+    flex: 1;
+    margin-right: 20px;
+}
+ 
+.titAi {
+    font-size: 3em;
+    color: #333333;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: left;
+}
+ 
+.txtAIz {
+    display: flex;
+    flex-direction: column;
+}
+ 
+.txtAi {
+    font-size: 1.5em;
+    color: #555555;
+    margin-bottom: 10px;
+    max-width: 573px; /* Adicionado para limitar a largura */
+}
+ 
+.txtAi2 {
+    font-size: 1.2em;
+    color: #666666;
+    line-height: 1.6;
+    max-width: 572px; /* Adicionado para limitar a largura */
+}
+
+.imgAIc {
+    display: flex;
+    align-items: center;
+}
+ 
+.imgAi {
+    width: 90%; /* Ajustar para ocupar 100% do espaço disponível */
+    max-width: 471px; /* Tamanho máximo */
+    height: auto; /* Altura automática para manter a proporção */
+    border-radius: 15%; /* Arredondamento de bordas */
+}
+
+
+
+/* Botão e GIF*/
+.btnAI {
+    width: 100%;
+    max-width: 560px;
+    height: 64px;
+    background: #7aa1bb;
+    border-radius: 14px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(139, 139, 139, 0.4);
+    transition: transform 0.3s;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.btnAI:hover {
+    transform: scale(1.05);
+    background-color: rgba(52, 148, 173, 1);
+}
+
+.btnAI:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.testeAI {
+    display: flex;
+    justify-content: space-between; /* Espaça os lados esquerdo e direito */
+    align-items: center; /* Alinha os itens no início */
+    padding: 64px;
+    margin-top: 3px;
+    background: url(imgs/back3.png);
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column; /* Organiza imagem e botão em coluna */
+    align-items: flex-start; /* Alinha à esquerda */
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column; /* Organiza título e texto em coluna */
+    align-items: flex-start; /* Alinha à esquerda */
+    max-width: 400px; /* Limita a largura do texto */
+}
+
+.tiltgifAI {
+    margin-bottom: 10px; /* Espaçamento entre o título e o texto */
+    font-size: 2em; /* Ajuste o tamanho conforme necessário */
+    color: #ffffff; /* Ajuste a cor se necessário */
+}
+
+.gifAi {
+    width: 100%;
+    max-width: 500px; /* Ajuste a largura da imagem se necessário */
+    height: auto;
+    border-radius: 10px;
+}
+
+.textgifAI {
+    color: #fdfdfd; /* Ajuste a cor do texto, se necessário */
+    font-size: 20px;
+}
+
+
+ 
+ 
+ 
+ 
+/* Footer */
+.main-footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+
+.email{
+    color: #ffffff;
+}
+
+
+.footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.footer h4 {
+    margin: 10px 0;
+}
+
+
+.footer p {
+    margin: 5px 0;
+}
+
+
+.twitter-button {
+    width: 40px; /* Ajuste o tamanho conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+
+.twitter-button:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+
+
+
+/* Lista */
+.todo-section {
+    background: url(imgs/back3.png);
+    padding: 90px 20px;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.toDo {
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+#formProduto {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+#formProduto input[type="text"] {
+    padding: 18px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 60%;
+    max-width: 300px;
+}
+
+
+#formProduto input[type="text"]:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+
+#formProduto button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color:  #7aa1bb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+#formProduto button:hover {
+    background-color: #2874a6;
+}
+
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.task-list li {
+    background-color: #ffffff;
+    color: #181818;
+    font-weight: bold;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+
+.task-list li:hover {
+    transform: scale(1.02);
+}
+
+
+.task-list li span {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 10px;
+}
+
+
+.task-list li button {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+.task-list li button:first-child {
+    background-color: #387977;
+    color: white;
+    margin-right: 8px;
+}
+
+
+.task-list li button:last-child {
+    background-color: #4f5261;
+    color: white;
+}
+
+
+ 
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+ 
+@keyframes slideIn {
+    0% {
+        transform: translateY(-2px); /* Movendo menos para começar */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+ 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+ 
+@keyframes parallaxScroll {
+    0% {
+        background-position-x: 0%;
+    }
+    50% {
+        background-position-x: 100%;
+    }
+    100% {
+        background-position-x: 0%;
+    }
+}
+
+
+  .scroll-to-top{
+	position: fixed;
+	bottom: 30px;
+	right: 15px;
+	width: 50px;
+	height: 50px;
+    background-color: #8cabbe;
+    border-radius: 30%;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.scroll-to-top img{
+    width: 30px;
+}

@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f3;
+    color: #333;
+}
+
+header {
+    background-image: url(imgs/back3.png);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+
+.email{
+    color: #ffffff;
+}
+
+
+.footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.footer h4 {
+    margin: 10px 0;
+}
+
+
+.footer p {
+    margin: 5px 0;
+}
+
+
+.twitter-button {
+    width: 40px; /* Ajuste o tamanho conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+
+.twitter-button:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+
+.cta-btn {
+    display: inline-block;
+    background-color: rgba(122, 161, 187, 1); /* Verde */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+.cta-btn:hover {
+    background-color:rgb(149, 191, 219); /* Verde mais escuro */
+    transform: translateY(-2px);
+}
+
+.cta-btn:active {
+    transform: translateY(0);
+}
+
+.main-footer {
+    background-color: #343a40; /* Cinza escuro */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
